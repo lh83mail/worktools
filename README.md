@@ -5,4 +5,4 @@
 配置好的Asciidoc文档生成工具,采用Gradle. 支持生成中文PDF
 ## 使用方式
  * asciidoctor 源文件放在 src/docs/asciidoc 目录中
- * 执行 `gradle asciidoc` 生产文件
+ * 执行 `./gradlew asciidoc` 生产文件

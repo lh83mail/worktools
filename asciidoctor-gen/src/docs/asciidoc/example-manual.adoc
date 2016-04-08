@@ -1,0 +1,104 @@
+= Asciidoctor 中文示例
+Li Hong <lh83mail@126.com>
+2016-04-08
+:revnumber: {project-version}
+:example-caption!:
+ifndef::imagesdir[:imagesdir: images]
+
+测试中文的示例文档
+
+== 说明
+
+这个文档用来测试中文显示, 关于asciidoctor的语法请参见 http://asciidoctor.org/docs/asciidoc-syntax-quick-reference[语法参考]
+
+如果你喜欢所见即所得的编辑方式,可以使用Atom编辑器加上 asciidoc 插件
+
+
+== 源代码示例
+
+你可以使用下列命令进行生成文档:
+
+ $ ./gradlew asciidoctor
+
+== 一堆HelloWorld
+
+.JAVA
+[source,java]
+----
+  public class HelloWorld {
+      public static void main(String[] args) {
+          System.out.println("Hello, World!");
+      }
+  }
+----
+
+.Python
+[source,python]
+----
+  print "Hello, World"
+----
+
+.C
+[source, c]
+----
+  #include <stdio.h>
+  int main()
+  {
+      printf("Hello World!/n");
+      return 0;
+  }
+----
+
+.C++
+[source, c++]
+----
+  #include <iostream.h>
+  int main()
+  {
+      cout<<"Hello World!"<<endl;
+      return 0;
+  }
+----
+
+.Lisp
+[source,lisp]
+----
+(format t "Hello world!")
+----
+
+.Lua
+[source,lua]
+----
+print "Hello World!/n"
+----
+
+== 图像示例
+
+[.thumb]
+image::sunset.jpg[scaledwidth=75%]
+
+== 文档属性示例
+
+.构建信息
+asciidoctor-version:: {asciidoctor-version}
+safe-mode-name:: {safe-mode-name}
+docdir:: {docdir}
+docfile:: {docfile}
+imagesdir:: {imagesdir}
+
+
+== 包含子页面示例
+
+.include::subdir/_b.adoc[]
+====
+include::subdir/_b.adoc[]
+====
+
+WARNING: 这里是警告信息.
+
+== build.gradle
+
+[source,groovy]
+----
+include::{build-gradle}[]
+----
